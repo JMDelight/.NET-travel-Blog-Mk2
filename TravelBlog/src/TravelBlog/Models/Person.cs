@@ -11,5 +11,6 @@ namespace TravelBlog.Models
         [Key]
         public int PersonId { get; set; }
         public string Name { get; set; }
+        public virtual IList<PersonExperience> PeopleExperiences { get; set; }
     }
 }

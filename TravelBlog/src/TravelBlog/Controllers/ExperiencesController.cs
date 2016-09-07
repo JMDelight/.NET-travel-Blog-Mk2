@@ -31,5 +31,27 @@ namespace TravelBlog.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public IActionResult CreateRelationship()
+        {
+            ViewBag.PersonId = new SelectList(db.People, "PersonId", "Name");
+            ViewBag.ExperienceId = new SelectList(db.Experiences, "ExperienceId", "Description");
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateRelationship(int experienceId, int personId)
+        {
+            PersonExperience personExperience = new PersonExperience(personId, experienceId);
+            db.PeopleExperiences.Add(personExperience);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        //public IActionResult Details(int id)
+        //{
+        //    var thisItem = db.Experiences.Include(experiences => experiences.People).FirstOrDefault(experiences => experiences.ExperienceId == id);
+        //    return View(thisItem);
+        //}
     }
 }

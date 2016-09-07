@@ -1,0 +1,16 @@
+﻿@{ 
+    ViewData["Title"] = "Travel Blog | Add Person";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model TravelBlog.Models.Person
+
+<h2>Add New Person</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+
+    <input type="submit" value="Submit" />
+}

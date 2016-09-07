@@ -1,0 +1,14 @@
+﻿@{ 
+    ViewData["Title"] = "Travel Blog | Create Relationship";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create Relationship</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.DropDownList("PersonId")
+    @Html.DropDownList("ExperienceId")
+
+    <input type="submit" value="Submit" />
+}

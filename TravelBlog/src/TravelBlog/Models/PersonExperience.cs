@@ -6,8 +6,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TravelBlog.Models
 {
-    public class PeopleExperiences
+    public class PersonExperience
     {
+        public PersonExperience(int personId, int experienceId)
+        {
+            PersonId = personId;
+            ExperienceId = experienceId;
+        }
+
         [Key]
         public int PeopleExperiencesId { get; set; }
         public int PersonId { get; set; }

@@ -8,9 +8,10 @@ using TravelBlog.Models;
 namespace TravelBlog.Migrations
 {
     [DbContext(typeof(TravelBlogDbContext))]
-    partial class TravelBlogDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160907215435_AddRelationship")]
+    partial class AddRelationship
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rc2-20901")
@@ -49,22 +50,27 @@ namespace TravelBlog.Migrations
                     b.Property<int>("PersonId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int?>("ExperienceId");
+
                     b.Property<string>("Name");
 
                     b.HasKey("PersonId");
+
+                    b.HasIndex("ExperienceId");
 
                     b.ToTable("People");
                 });
 
             modelBuilder.Entity("TravelBlog.Models.PersonExperience", b =>
                 {
+                    b.Property<int>("PersonExperienceId")
+                        .ValueGeneratedOnAdd();
+
                     b.Property<int>("ExperienceId");
 
                     b.Property<int>("PersonId");
 
-                    b.Property<int>("PersonExperienceId");
-
-                    b.HasKey("ExperienceId", "PersonId");
+                    b.HasKey("PersonExperienceId");
 
                     b.HasIndex("ExperienceId");
 
@@ -79,6 +85,13 @@ namespace TravelBlog.Migrations
                         .WithMany()
                         .HasForeignKey("LocationId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("TravelBlog.Models.Person", b =>
+                {
+                    b.HasOne("TravelBlog.Models.Experience")
+                        .WithMany()
+                        .HasForeignKey("ExperienceId");
                 });
 
             modelBuilder.Entity("TravelBlog.Models.PersonExperience", b =>

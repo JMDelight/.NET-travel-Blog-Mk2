@@ -8,9 +8,12 @@
 <ul>
     @foreach(var listItem in Model)
     {
-    <li>@Html.DisplayFor(modelItem => listItem.Description) - @Html.ActionLink(listItem.Location.Name, "Details", "Locations", new { id = listItem.LocationId })</li>
+    <li>@Html.DisplayFor(modelItem => listItem.Description) - @Html.ActionLink(listItem.Location.Name, "Details", "Location", new { id = listItem.LocationId })</li>
 
     }
 </ul>
 
 <p>@Html.ActionLink("Submit New Experience", "Create")</p>
+<p>@Html.ActionLink("Add New Location", "Create", "Locations")</p>
+<p>@Html.ActionLink("Add New Person", "Create", "People")</p>
+<p>@Html.ActionLink("Add Person to Experience", "CreateRelationship")</p>

@@ -8,9 +8,10 @@ using TravelBlog.Models;
 namespace TravelBlog.Migrations
 {
     [DbContext(typeof(TravelBlogDbContext))]
-    partial class TravelBlogDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160907213446_ChangeJoinTableNaming")]
+    partial class ChangeJoinTableNaming
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rc2-20901")
@@ -58,13 +59,14 @@ namespace TravelBlog.Migrations
 
             modelBuilder.Entity("TravelBlog.Models.PersonExperience", b =>
                 {
+                    b.Property<int>("PersonExperienceId")
+                        .ValueGeneratedOnAdd();
+
                     b.Property<int>("ExperienceId");
 
                     b.Property<int>("PersonId");
 
-                    b.Property<int>("PersonExperienceId");
-
-                    b.HasKey("ExperienceId", "PersonId");
+                    b.HasKey("PersonExperienceId");
 
                     b.HasIndex("ExperienceId");
 
