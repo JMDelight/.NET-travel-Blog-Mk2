@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Travel Blog | New Experience";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model TravelBlog.Models.Experience
+
+<h2>Log New Experience</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Description)
+    @Html.TextBoxFor(model => model.Description)
+
+    @Html.LabelFor(model => model.LocationId)
+    @Html.DropDownList("LocationId")
+
+    <input type="submit" value="Submit" />
+}

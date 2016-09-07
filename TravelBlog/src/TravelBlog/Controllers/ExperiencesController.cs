@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TravelBlog.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace TravelBlog.Controllers
 {
@@ -15,6 +16,20 @@ namespace TravelBlog.Controllers
         public IActionResult Index()
         {
             return View(db.Experiences.Include(experiences => experiences.Location).ToList());
+        }
+
+        public IActionResult Create()
+        {
+            ViewBag.LocationId = new SelectList(db.Locations, "LocationId", "Name");
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Experience experience)
+        {
+            db.Experiences.Add(experience);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

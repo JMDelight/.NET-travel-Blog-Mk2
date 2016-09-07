@@ -11,7 +11,7 @@ namespace TravelBlog.Models
         public DbSet<Location> Locations { get; set; }
         public DbSet<Experience> Experiences { get; set; }
         public DbSet<Person> People { get; set; }
-        public DbSet<PeopleExperiences> PeopleExperiences { get; set; }
+        public DbSet<PeopleExperiences> PeopleExperiences { get; set;}
 
         public TravelBlogDbContext(DbContextOptions<TravelBlogDbContext> options)
             : base(options)
