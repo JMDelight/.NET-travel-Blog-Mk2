@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Travel Blog | Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<TravelBlog.Models.Location>
+
+<ul>
+    @foreach (var listItem in Model)
+    {
+        <li> @Html.ActionLink(listItem.Name, "Details", new { id = listItem.LocationId })</li>
+
+    } 
+</ul>

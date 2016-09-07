@@ -8,9 +8,10 @@ using TravelBlog.Models;
 namespace TravelBlog.Migrations
 {
     [DbContext(typeof(TravelBlogDbContext))]
-    partial class TravelBlogDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160907174555_AddPersonModel")]
+    partial class AddPersonModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rc2-20901")
@@ -44,24 +45,6 @@ namespace TravelBlog.Migrations
                     b.ToTable("Locations");
                 });
 
-            modelBuilder.Entity("TravelBlog.Models.PeopleExperiences", b =>
-                {
-                    b.Property<int>("PeopleExperiencesId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("ExperienceId");
-
-                    b.Property<int>("PersonId");
-
-                    b.HasKey("PeopleExperiencesId");
-
-                    b.HasIndex("ExperienceId");
-
-                    b.HasIndex("PersonId");
-
-                    b.ToTable("PeopleExperiences");
-                });
-
             modelBuilder.Entity("TravelBlog.Models.Person", b =>
                 {
                     b.Property<int>("PersonId")
@@ -79,19 +62,6 @@ namespace TravelBlog.Migrations
                     b.HasOne("TravelBlog.Models.Location")
                         .WithMany()
                         .HasForeignKey("LocationId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("TravelBlog.Models.PeopleExperiences", b =>
-                {
-                    b.HasOne("TravelBlog.Models.Experience")
-                        .WithMany()
-                        .HasForeignKey("ExperienceId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("TravelBlog.Models.Person")
-                        .WithMany()
-                        .HasForeignKey("PersonId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
         }

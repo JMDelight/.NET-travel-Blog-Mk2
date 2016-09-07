@@ -6,12 +6,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TravelBlog.Models
 {
-    public class Location
+    public class Person
     {
         [Key]
-        public int LocationId { get; set; }
+        public int PersonId { get; set; }
         public string Name { get; set; }
-        public virtual ICollection<Experience> Experiences { get; set; }
-
     }
 }

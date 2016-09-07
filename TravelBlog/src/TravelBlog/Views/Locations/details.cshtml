@@ -1,0 +1,13 @@
+﻿@{ 
+    ViewData["Title"] = "Travel Blog | Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model TravelBlog.Models.Location
+
+<ul>
+    @foreach (var listItem in Model.Experiences)
+    {
+        <li>@Html.DisplayFor(experience => listItem.Description)</li>
+        
+    } 
+</ul>
