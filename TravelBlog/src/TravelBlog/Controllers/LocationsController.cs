@@ -18,15 +18,18 @@ namespace TravelBlog.Controllers
         {
             return View(db.Locations.Include(locations => locations.Experiences).ToList());
         }
+
         public IActionResult Details(int id)
         {
             var thisItem = db.Locations.Include(locations => locations.Experiences).FirstOrDefault(locations => locations.LocationId == id);
             return View(thisItem);
         }
+
         public IActionResult Create()
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult Create(Location location)
         {
@@ -34,11 +37,13 @@ namespace TravelBlog.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
         public IActionResult Edit(int id)
         {
             var thisLocation = db.Locations.FirstOrDefault(locations => locations.LocationId == id);
             return View(thisLocation);
         }
+
         [HttpPost]
         public IActionResult Edit(Location location)
         {
@@ -46,5 +51,21 @@ namespace TravelBlog.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public IActionResult Delete(int id)
+        {
+            Location thisLoc = db.Locations.FirstOrDefault(loc => loc.LocationId == id);
+            return View(thisLoc);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            Location thisLoc = db.Locations.FirstOrDefault(loc => id == loc.LocationId);
+            db.Locations.Remove(thisLoc);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }

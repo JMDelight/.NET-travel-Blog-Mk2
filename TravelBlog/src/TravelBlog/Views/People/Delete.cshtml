@@ -1,0 +1,16 @@
+﻿@{ 
+    ViewData["Title"] = "Travel Blog | Delete " + Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model TravelBlog.Models.Person
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.PersonId)
+
+    <h2>Are you sure you want to delete @Html.DisplayFor(model => model.Name)?</h2>
+
+    <input type="submit" value="Delete" />
+
+}

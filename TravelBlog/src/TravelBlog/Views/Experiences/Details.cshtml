@@ -8,6 +8,7 @@
 
 <p>@Html.DisplayFor(exp => exp.Description)</p>
 <p>@Html.ActionLink("Edit", "Edit", new { id = Model.ExperienceId })</p>
+<p>@Html.ActionLink("Delete", "Delete", new { id = Model.ExperienceId })</p>
 
 @foreach (var personExperience in Model.People)
 {

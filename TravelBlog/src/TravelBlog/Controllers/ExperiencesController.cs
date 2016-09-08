@@ -72,5 +72,20 @@ namespace TravelBlog.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public IActionResult Delete(int id)
+        {
+            Experience thisExp = db.Experiences.FirstOrDefault(exp => exp.ExperienceId == id);
+            return View(thisExp);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            Experience exp = db.Experiences.FirstOrDefault(exper => exper.ExperienceId == id);
+            db.Experiences.Remove(exp);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
