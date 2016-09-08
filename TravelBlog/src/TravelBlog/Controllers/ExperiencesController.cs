@@ -43,7 +43,11 @@ namespace TravelBlog.Controllers
 
         public IActionResult Details(int id)
         {
-            ViewBag.PersonId = new SelectList(db.People, "PersonId", "Name");
+            var validPeople = db.People
+                .FromSql("SELECT * FROM People WHERE People.PersonId NOT IN (SELECT PeopleExperiences.PersonId FROM PeopleExperiences WHERE ExperienceId = {0})", id)
+                .ToList();
+
+            ViewBag.PersonId = new SelectList(validPeople, "PersonId", "Name");
 
             Experience thisExperience = db.Experiences
                 .Include(experiences => experiences.People)
@@ -84,3 +88,4 @@ namespace TravelBlog.Controllers
         }
     }
 }
+
