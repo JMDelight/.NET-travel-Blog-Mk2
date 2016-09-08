@@ -14,3 +14,15 @@
 {
     <p>@Html.DisplayFor(name => personExperience.Person.Name)</p>
 }
+
+<h3>Add Person to This Experience</h3>
+
+@using (Html.BeginForm("CreateRelationship", "Experiences"))
+{
+    @Html.LabelFor(model => model.People)
+    @Html.DropDownList("PersonId")
+
+    @Html.HiddenFor(model => model.ExperienceId)
+
+    <input type="submit" value="Submit" />
+}

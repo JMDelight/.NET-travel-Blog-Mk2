@@ -32,24 +32,19 @@ namespace TravelBlog.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult CreateRelationship()
-        {
-            ViewBag.PersonId = new SelectList(db.People, "PersonId", "Name");
-            ViewBag.ExperienceId = new SelectList(db.Experiences, "ExperienceId", "Description");
-            return View();
-        }
-
         [HttpPost]
         public IActionResult CreateRelationship(int experienceId, int personId)
         {
             PersonExperience personExperience = new PersonExperience(personId, experienceId);
             db.PeopleExperiences.Add(personExperience);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", new { id = experienceId });
         }
 
         public IActionResult Details(int id)
         {
+            ViewBag.PersonId = new SelectList(db.People, "PersonId", "Name");
+
             Experience thisExperience = db.Experiences
                 .Include(experiences => experiences.People)
                 .ThenInclude(pE => pE.Person)
