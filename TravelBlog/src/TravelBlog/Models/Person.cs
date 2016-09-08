@@ -8,6 +8,9 @@ namespace TravelBlog.Models
 {
     public class Person
     {
+        public Person()
+        { }
+
         [Key]
         public int PersonId { get; set; }
         public string Name { get; set; }

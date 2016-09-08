@@ -14,6 +14,8 @@ namespace TravelBlog.Models
             ExperienceId = experienceId;
         }
 
+        public PersonExperience() { }
+
         [Key]
         public int PeopleExperiencesId { get; set; }
         public int PersonId { get; set; }

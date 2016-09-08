@@ -13,6 +13,11 @@ namespace TravelBlog.Models
         public virtual DbSet<Person> People { get; set; }
         public virtual DbSet<PersonExperience> PeopleExperiences { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=TravelBlog;integrated security=True");

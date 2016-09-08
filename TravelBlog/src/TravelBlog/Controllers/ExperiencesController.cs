@@ -48,10 +48,14 @@ namespace TravelBlog.Controllers
             return RedirectToAction("Index");
         }
 
-        //public IActionResult Details(int id)
-        //{
-        //    var thisItem = db.Experiences.Include(experiences => experiences.People).FirstOrDefault(experiences => experiences.ExperienceId == id);
-        //    return View(thisItem);
-        //}
+        public IActionResult Details(int id)
+        {
+            Experience otherExperience = db.Experiences
+                .Include(experiences => experiences.People)
+                .ThenInclude(pE => pE.Person)
+                .FirstOrDefault(experience => experience.ExperienceId == id);
+
+            return View(otherExperience);
+        }
     }
 }

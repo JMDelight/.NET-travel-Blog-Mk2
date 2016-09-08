@@ -7,7 +7,7 @@
 <ul>
     @foreach (var listItem in Model.Experiences)
     {
-        <li>@Html.ActionLink(listItem.Description, "Experience", new { id = listItem.ExperienceId})</li>
+        <li>@Html.ActionLink(listItem.Description, "Details", "Experiences", new { id = listItem.ExperienceId})</li>
         
     } 
 </ul>

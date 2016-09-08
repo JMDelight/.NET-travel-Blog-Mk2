@@ -31,7 +31,7 @@ namespace TravelBlog.Models
 
             modelBuilder.Entity<PersonExperience>()
                 .HasOne(person => person.Experience)
-                .WithMany(experience => experience.PeopleExperiences)
+                .WithMany(experience => experience.People)
                 .HasForeignKey(person => person.ExperienceId);
         }
 

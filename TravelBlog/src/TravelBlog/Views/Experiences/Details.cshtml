@@ -5,4 +5,10 @@
 
 @model TravelBlog.Models.Experience
 
-<p>@Html.DisplayFor(model => model.Description)</p>
+
+<p>@Html.DisplayFor(exp => exp.Description)</p>
+
+@foreach (var personExperience in Model.People)
+{
+    <p>@Html.DisplayFor(name => personExperience.Person.Name)</p>
+}
