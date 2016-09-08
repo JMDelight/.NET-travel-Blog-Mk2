@@ -50,12 +50,27 @@ namespace TravelBlog.Controllers
 
         public IActionResult Details(int id)
         {
-            Experience otherExperience = db.Experiences
+            Experience thisExperience = db.Experiences
                 .Include(experiences => experiences.People)
                 .ThenInclude(pE => pE.Person)
                 .FirstOrDefault(experience => experience.ExperienceId == id);
 
-            return View(otherExperience);
+            return View(thisExperience);
+        }
+
+        public IActionResult Edit(int id)
+        {
+            ViewBag.LocationId = new SelectList(db.Locations, "LocationId", "Name");
+            Experience thisExperience = db.Experiences.FirstOrDefault(experience => experience.ExperienceId == id);
+            return View(thisExperience);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Experience experience)
+        {
+            db.Entry(experience).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

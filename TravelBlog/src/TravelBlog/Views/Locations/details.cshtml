@@ -4,6 +4,7 @@
 }
 @model TravelBlog.Models.Location
 
+<h3>@Html.DisplayFor(model => model.Name)</h3>
 <ul>
     @foreach (var listItem in Model.Experiences)
     {
@@ -11,3 +12,5 @@
         
     } 
 </ul>
+
+@Html.ActionLink("Edit", "Edit", new {id = Model.LocationId})

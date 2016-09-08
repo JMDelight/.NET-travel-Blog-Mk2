@@ -6,10 +6,10 @@
 @model IEnumerable<TravelBlog.Models.Experience>
 
 <ul>
-    @foreach(var listItem in Model)
+    @foreach (var listItem in Model)
     {
-    <li>@Html.DisplayFor(modelItem => listItem.Description) - @Html.ActionLink(listItem.Location.Name, "Details", "Locations", new { id = listItem.LocationId })</li>
-
+    <li>@Html.ActionLink(listItem.Description, "Details", new { id = listItem.ExperienceId }) - @Html.ActionLink(listItem.Location.Name, "Details", "Locations", new { id = listItem.LocationId })</li>
+   
     }
 </ul>
 
