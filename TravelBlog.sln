@@ -1,0 +1,142 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B2D5887C-7E7A-4F39-BA4F-0CB1D0502EE2}"
+	ProjectSection(SolutionItems) = preProject
+		TravelBlog\src\TravelBlog\appsettings.json = TravelBlog\src\TravelBlog\appsettings.json
+		TravelBlog\src\TravelBlog\Program.cs = TravelBlog\src\TravelBlog\Program.cs
+		TravelBlog\src\TravelBlog\project.json = TravelBlog\src\TravelBlog\project.json
+		TravelBlog\src\TravelBlog\Project_Readme.html = TravelBlog\src\TravelBlog\Project_Readme.html
+		TravelBlog\src\TravelBlog\Startup.cs = TravelBlog\src\TravelBlog\Startup.cs
+		TravelBlog\src\TravelBlog\TravelBlog.xproj = TravelBlog\src\TravelBlog\TravelBlog.xproj
+		TravelBlog\src\TravelBlog\web.config = TravelBlog\src\TravelBlog\web.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TravelBlog", "TravelBlog", "{20D50B9E-7783-42F0-97B7-79C5EB1E657A}"
+	ProjectSection(SolutionItems) = preProject
+		TravelBlog\src\TravelBlog\appsettings.json = TravelBlog\src\TravelBlog\appsettings.json
+		TravelBlog\src\TravelBlog\Program.cs = TravelBlog\src\TravelBlog\Program.cs
+		TravelBlog\src\TravelBlog\project.json = TravelBlog\src\TravelBlog\project.json
+		TravelBlog\src\TravelBlog\Project_Readme.html = TravelBlog\src\TravelBlog\Project_Readme.html
+		TravelBlog\src\TravelBlog\Startup.cs = TravelBlog\src\TravelBlog\Startup.cs
+		TravelBlog\src\TravelBlog\TravelBlog.xproj = TravelBlog\src\TravelBlog\TravelBlog.xproj
+		TravelBlog\src\TravelBlog\web.config = TravelBlog\src\TravelBlog\web.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controllers", "Controllers", "{F86DE695-1031-4B23-BB59-0DDE0CC4C473}"
+	ProjectSection(SolutionItems) = preProject
+		TravelBlog\src\TravelBlog\Controllers\ExperiencesController.cs = TravelBlog\src\TravelBlog\Controllers\ExperiencesController.cs
+		TravelBlog\src\TravelBlog\Controllers\HomeController.cs = TravelBlog\src\TravelBlog\Controllers\HomeController.cs
+		TravelBlog\src\TravelBlog\Controllers\LocationsController.cs = TravelBlog\src\TravelBlog\Controllers\LocationsController.cs
+		TravelBlog\src\TravelBlog\Controllers\PeopleController.cs = TravelBlog\src\TravelBlog\Controllers\PeopleController.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Migrations", "Migrations", "{9C9409FF-C62D-4752-85E2-0127EA2D3234}"
+	ProjectSection(SolutionItems) = preProject
+		TravelBlog\src\TravelBlog\Migrations\20160907161737_Initial.cs = TravelBlog\src\TravelBlog\Migrations\20160907161737_Initial.cs
+		TravelBlog\src\TravelBlog\Migrations\20160907161737_Initial.Designer.cs = TravelBlog\src\TravelBlog\Migrations\20160907161737_Initial.Designer.cs
+		TravelBlog\src\TravelBlog\Migrations\20160907174555_AddPersonModel.cs = TravelBlog\src\TravelBlog\Migrations\20160907174555_AddPersonModel.cs
+		TravelBlog\src\TravelBlog\Migrations\20160907174555_AddPersonModel.Designer.cs = TravelBlog\src\TravelBlog\Migrations\20160907174555_AddPersonModel.Designer.cs
+		TravelBlog\src\TravelBlog\Migrations\20160907175827_AddPeopleExperiencesModel.cs = TravelBlog\src\TravelBlog\Migrations\20160907175827_AddPeopleExperiencesModel.cs
+		TravelBlog\src\TravelBlog\Migrations\20160907175827_AddPeopleExperiencesModel.Designer.cs = TravelBlog\src\TravelBlog\Migrations\20160907175827_AddPeopleExperiencesModel.Designer.cs
+		TravelBlog\src\TravelBlog\Migrations\20160907181142_AddCollectionOfExperiencesToLocation.cs = TravelBlog\src\TravelBlog\Migrations\20160907181142_AddCollectionOfExperiencesToLocation.cs
+		TravelBlog\src\TravelBlog\Migrations\20160907181142_AddCollectionOfExperiencesToLocation.Designer.cs = TravelBlog\src\TravelBlog\Migrations\20160907181142_AddCollectionOfExperiencesToLocation.Designer.cs
+		TravelBlog\src\TravelBlog\Migrations\20160907213446_ChangeJoinTableNaming.cs = TravelBlog\src\TravelBlog\Migrations\20160907213446_ChangeJoinTableNaming.cs
+		TravelBlog\src\TravelBlog\Migrations\20160907213446_ChangeJoinTableNaming.Designer.cs = TravelBlog\src\TravelBlog\Migrations\20160907213446_ChangeJoinTableNaming.Designer.cs
+		TravelBlog\src\TravelBlog\Migrations\20160907215435_AddRelationship.cs = TravelBlog\src\TravelBlog\Migrations\20160907215435_AddRelationship.cs
+		TravelBlog\src\TravelBlog\Migrations\20160907215435_AddRelationship.Designer.cs = TravelBlog\src\TravelBlog\Migrations\20160907215435_AddRelationship.Designer.cs
+		TravelBlog\src\TravelBlog\Migrations\20160907231802_SetUpRelationship.cs = TravelBlog\src\TravelBlog\Migrations\20160907231802_SetUpRelationship.cs
+		TravelBlog\src\TravelBlog\Migrations\20160907231802_SetUpRelationship.Designer.cs = TravelBlog\src\TravelBlog\Migrations\20160907231802_SetUpRelationship.Designer.cs
+		TravelBlog\src\TravelBlog\Migrations\TravelBlogDbContextModelSnapshot.cs = TravelBlog\src\TravelBlog\Migrations\TravelBlogDbContextModelSnapshot.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{63AF18D2-85B6-49A1-AF15-13404FB052B2}"
+	ProjectSection(SolutionItems) = preProject
+		TravelBlog\src\TravelBlog\Models\Experience.cs = TravelBlog\src\TravelBlog\Models\Experience.cs
+		TravelBlog\src\TravelBlog\Models\Location.cs = TravelBlog\src\TravelBlog\Models\Location.cs
+		TravelBlog\src\TravelBlog\Models\Person.cs = TravelBlog\src\TravelBlog\Models\Person.cs
+		TravelBlog\src\TravelBlog\Models\PersonExperience.cs = TravelBlog\src\TravelBlog\Models\PersonExperience.cs
+		TravelBlog\src\TravelBlog\Models\TravelBlogContext.cs = TravelBlog\src\TravelBlog\Models\TravelBlogContext.cs
+		TravelBlog\src\TravelBlog\Models\TravelBlogDbContext.cs = TravelBlog\src\TravelBlog\Models\TravelBlogDbContext.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", "{06656771-7B3F-464E-8344-B2D6A2B91C34}"
+	ProjectSection(SolutionItems) = preProject
+		TravelBlog\src\TravelBlog\Properties\launchSettings.json = TravelBlog\src\TravelBlog\Properties\launchSettings.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Views", "Views", "{3A3CC575-4897-47E1-96C3-08738FD8BDCC}"
+	ProjectSection(SolutionItems) = preProject
+		TravelBlog\src\TravelBlog\Views\Index.cshtml = TravelBlog\src\TravelBlog\Views\Index.cshtml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Experiences", "Experiences", "{BD5487D6-A78D-42F0-9849-9AEE87858341}"
+	ProjectSection(SolutionItems) = preProject
+		TravelBlog\src\TravelBlog\Views\Experiences\Create.cshtml = TravelBlog\src\TravelBlog\Views\Experiences\Create.cshtml
+		TravelBlog\src\TravelBlog\Views\Experiences\Delete.cshtml = TravelBlog\src\TravelBlog\Views\Experiences\Delete.cshtml
+		TravelBlog\src\TravelBlog\Views\Experiences\Details.cshtml = TravelBlog\src\TravelBlog\Views\Experiences\Details.cshtml
+		TravelBlog\src\TravelBlog\Views\Experiences\Edit.cshtml = TravelBlog\src\TravelBlog\Views\Experiences\Edit.cshtml
+		TravelBlog\src\TravelBlog\Views\Experiences\Index.cshtml = TravelBlog\src\TravelBlog\Views\Experiences\Index.cshtml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Locations", "Locations", "{94E24E3D-AE4B-4B0E-9FB5-62BBE8BD442D}"
+	ProjectSection(SolutionItems) = preProject
+		TravelBlog\src\TravelBlog\Views\Locations\Create.cshtml = TravelBlog\src\TravelBlog\Views\Locations\Create.cshtml
+		TravelBlog\src\TravelBlog\Views\Locations\Delete.cshtml = TravelBlog\src\TravelBlog\Views\Locations\Delete.cshtml
+		TravelBlog\src\TravelBlog\Views\Locations\details.cshtml = TravelBlog\src\TravelBlog\Views\Locations\details.cshtml
+		TravelBlog\src\TravelBlog\Views\Locations\Edit.cshtml = TravelBlog\src\TravelBlog\Views\Locations\Edit.cshtml
+		TravelBlog\src\TravelBlog\Views\Locations\Index.cshtml = TravelBlog\src\TravelBlog\Views\Locations\Index.cshtml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "People", "People", "{A25B8BBD-A136-4D1A-AE13-98C0F7CC16B4}"
+	ProjectSection(SolutionItems) = preProject
+		TravelBlog\src\TravelBlog\Views\People\Create.cshtml = TravelBlog\src\TravelBlog\Views\People\Create.cshtml
+		TravelBlog\src\TravelBlog\Views\People\Delete.cshtml = TravelBlog\src\TravelBlog\Views\People\Delete.cshtml
+		TravelBlog\src\TravelBlog\Views\People\Edit.cshtml = TravelBlog\src\TravelBlog\Views\People\Edit.cshtml
+		TravelBlog\src\TravelBlog\Views\People\Index.cshtml = TravelBlog\src\TravelBlog\Views\People\Index.cshtml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{BE8AAA64-72CB-40B0-8C8D-1B8CF5D8D8C4}"
+	ProjectSection(SolutionItems) = preProject
+		TravelBlog\src\TravelBlog\Views\Shared\_Layout.cshtml = TravelBlog\src\TravelBlog\Views\Shared\_Layout.cshtml
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TravelsBlog", "TravelsBlog\TravelsBlog.xproj", "{E8BE4328-8EA6-472F-87CB-66EC0D89FD2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DDCFC998-83F4-4BF3-B985-0B6D6A9D5516}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TravelBlog.Tests", "TravelBlog.Tests\TravelBlog.Tests.xproj", "{870EDF30-8E34-475C-84B3-2FED75C08660}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8BE4328-8EA6-472F-87CB-66EC0D89FD2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8BE4328-8EA6-472F-87CB-66EC0D89FD2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8BE4328-8EA6-472F-87CB-66EC0D89FD2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8BE4328-8EA6-472F-87CB-66EC0D89FD2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{870EDF30-8E34-475C-84B3-2FED75C08660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{870EDF30-8E34-475C-84B3-2FED75C08660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{870EDF30-8E34-475C-84B3-2FED75C08660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{870EDF30-8E34-475C-84B3-2FED75C08660}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F86DE695-1031-4B23-BB59-0DDE0CC4C473} = {3A3CC575-4897-47E1-96C3-08738FD8BDCC}
+		{9C9409FF-C62D-4752-85E2-0127EA2D3234} = {3A3CC575-4897-47E1-96C3-08738FD8BDCC}
+		{63AF18D2-85B6-49A1-AF15-13404FB052B2} = {3A3CC575-4897-47E1-96C3-08738FD8BDCC}
+		{06656771-7B3F-464E-8344-B2D6A2B91C34} = {3A3CC575-4897-47E1-96C3-08738FD8BDCC}
+		{3A3CC575-4897-47E1-96C3-08738FD8BDCC} = {20D50B9E-7783-42F0-97B7-79C5EB1E657A}
+		{BD5487D6-A78D-42F0-9849-9AEE87858341} = {3A3CC575-4897-47E1-96C3-08738FD8BDCC}
+		{94E24E3D-AE4B-4B0E-9FB5-62BBE8BD442D} = {3A3CC575-4897-47E1-96C3-08738FD8BDCC}
+		{A25B8BBD-A136-4D1A-AE13-98C0F7CC16B4} = {3A3CC575-4897-47E1-96C3-08738FD8BDCC}
+		{BE8AAA64-72CB-40B0-8C8D-1B8CF5D8D8C4} = {3A3CC575-4897-47E1-96C3-08738FD8BDCC}
+		{870EDF30-8E34-475C-84B3-2FED75C08660} = {DDCFC998-83F4-4BF3-B985-0B6D6A9D5516}
+	EndGlobalSection
+EndGlobal
